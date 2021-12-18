@@ -18,20 +18,14 @@ fetch(urlAll)
     container.innerHTML += `
     <div class="card ${character.house}">
     <img src="${character.image}" class="card-img" alt="${character.name}">
-    <div class="card-body">
-      <p class="card-text name">${character.name}</p>
-      <p class="card-text house">House: ${character.house}</p>
-    </div>
+      <h2 class="card-text name name-${character.house}">${character.name}</p>
   </div>
     `
     } else if(character.image === '') {
         container.innerHTML += `
         <div class="card ${character.house}">
         <img src="${character.house}-logo.png" class="card-img" alt="${character.name}">
-        <div class="card-body">
-          <p class="card-text name">${character.name}</p>
-          <p class="card-text house">House: ${character.house}</p>
-        </div>
+          <h2 class="card-text name name-${character.house}">${character.name}</p>
       </div>
         ` 
     } 
@@ -39,6 +33,8 @@ fetch(urlAll)
 }
 
 all.addEventListener('click', getAll);
+
+
 
 
 

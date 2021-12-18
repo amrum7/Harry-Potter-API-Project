@@ -14,6 +14,11 @@
 
 body {
     background-color: #fff;
+    background: url("hogwarts-castle.jpeg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1 {
@@ -63,35 +68,25 @@ button {
 
 .card {
     display: flex;
-    margin: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px 30px;
     border-radius: 5px;
 }
 
 .card-img {
-    margin: auto;
+    margin: 10px auto;
     width: 130px;
     height: 180px;
     border-radius: 50%;
 }
 
-.card-body {
-    display: flex;
-}
-
 .card-text {
-    margin: auto;
-}
-
-.card-text.name {
-    margin-left: 10px;
+    text-align: center;
 }
 
 .name {
     font-size: 40px;
-}
-
-.house {
-    font-size: 30px;
 }
 
 .Gryffindor {
@@ -99,17 +94,48 @@ button {
     border: var(--gryffindor-secondary) 5px solid;
 }
 
+.name-Gryffindor {
+    text-shadow: -6px 6px 7px var(--gryffindor-secondary),
+    1px 1px 2px var(--gryffindor-secondary),
+    1px -1px 0 var(--gryffindor-secondary),
+    -1px -1px 0 var(--gryffindor-secondary);
+}
+
 .Hufflepuff {
     background-color: var(--hufflepuff-primary);
     border: var(--hufflepuff-secondary) 5px solid;}
 
+.name-Hufflepuff {
+    color: var(--hufflepuff-primary);
+    text-shadow: -7px 9px 10px var(--hufflepuff-secondary),
+    1px 1px 2px var(--hufflepuff-secondary),
+    1px -1px 0 var(--hufflepuff-secondary),
+    -1px -1px 0 var(--hufflepuff-secondary);
+}
+
 .Ravenclaw {
     background-color: var(--ravenclaw-primary);
-    border: var(--ravenclaw-secondary) 5px solid;}
+    border: var(--ravenclaw-secondary) 5px solid;
+}
+
+.name-Ravenclaw {
+    text-shadow: -6px 6px 7px var(--ravenclaw-secondary),
+    1px 1px 2px var(--ravenclaw-secondary),
+    1px -1px 0 var(--ravenclaw-secondary),
+    -1px -1px 0 var(--ravenclaw-secondary);
+}
 
 .Slytherin {
     background-color: var(--slytherin-primary);
     border: var(--slytherin-secondary) 5px solid;}
+
+.name-Slytherin {
+    text-shadow: -6px 6px 7px var(--slytherin-secondary),
+    1px 1px 2px var(--slytherin-secondary),
+    1px -1px 0 var(--slytherin-secondary),
+    -1px -1px 0 var(--slytherin-secondary);
+    }
+
 
 @media(max-width: 760px){
     .container {
@@ -123,20 +149,8 @@ button {
         height: 150px;
         border-radius: 50%;
     }
-
-    .card-body {
-        display: inline-flex;
-    }
-
-    .card-text.name {
-        margin-left: 0;
-    }
     
     .name {
         font-size: 30px;
-    }
-    
-    .house {
-        font-size: 20px;
     }
 }
